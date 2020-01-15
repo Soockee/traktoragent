@@ -2,7 +2,7 @@
 import socket
 
 UDP_IP = "127.0.0.1"
-UDP_PORT = 5005
+UDP_PORT = 13336
 
 class TraktorServer:
     def __init__(udp_ip,udp_port):
@@ -15,6 +15,7 @@ class TraktorServer:
         while true:
             data, addr = sock.recvfrom(1024)
             print("recieved message: ", data)
+            print("from: ", addr)
 
 def main():
     traktorServer = TraktorServer(UDP_IP,UDP_PORT)
