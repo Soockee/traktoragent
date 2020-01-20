@@ -2,8 +2,8 @@
 import socket
 
 
-UDP_IP = "127.0.0.1"
-UDP_PORT = 13336
+UDP_IP = os.environ['AGENT_IP']
+UDP_PORT = os.environ['AGENT_PORT']
 class TraktorServer:
     def run(name):
         sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
